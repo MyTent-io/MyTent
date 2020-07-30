@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { signup } from '../pages/auth/auth';
+import './Login.css'
 
 export default class Signup extends Component {
   state = {
@@ -39,7 +40,7 @@ export default class Signup extends Component {
   render() {
     return (
       <>
-       
+       <div className="logContainer">
         <h2>Signup</h2>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group>
@@ -65,8 +66,9 @@ export default class Signup extends Component {
           {this.state.message && (
             <Alert variant='danger'>{this.state.message}</Alert>
           )}
-          <Button type='submit'>Signup</Button>
+          <button className="logButton" type='submit'>Signup</button>
         </Form>
+        </div>
       </>
     );
   }
