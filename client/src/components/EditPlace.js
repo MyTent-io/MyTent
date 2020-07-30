@@ -173,35 +173,35 @@ class EditPlace extends Component {
     console.log(this.props, "PROPS");
 
     return (
-        
-      <>
       <div className="allContainer">
+
        <div className="img-conpatiner">
-        <Link to={`/favorites`}><p>My Favorites </p></Link>
         <img className="profileimg" src={this.state.userPhoto} />
         </div>  
 
       
-        <form
+        <form 
+          className="formfield"
           encType="multipart/form-data"
           onSubmit={this.handleSubmitUserProfile}
         >
 
-        <div className="addpic">
+       
           <h2>Add a your profile picture!</h2>
+      
           <input
             type="file"
             name="photo"
             onChange={this.handleFileUploadProfile}
           ></input>
-          </div>
+      
      
          
          <div>
           {this.state.uploadOn ? (
-            <button disabled type="submit">
+            <button className="buttonAddpic" disabled type="submit">
               {" "}
-              Add a your profile picture{" "}
+              Add your picture{" "}
             </button>
           ) : (
               <button type="submit"> Add a your profile picture </button>
@@ -209,16 +209,14 @@ class EditPlace extends Component {
         </div>
         </form>
       
-      
-        <div className="addCampingPlace">
-        <h2> Add a new place for Camping!</h2>
         <form encType="multipart/form-data" onSubmit={this.handleSubmit}>
-
+        <div className="divForm">
+        <h2> Add a new place for Camping!</h2>
           {this.handleSubmit.state ? (
             <p> New place added. </p>
           ) : <p> Bratan Test! </p>}
 
-          <div>
+       <div>
           <label className="titleForm" htmlFor="title"> Title: </label>
           <input
             type="text"
@@ -228,6 +226,7 @@ class EditPlace extends Component {
             onChange={this.handleChange}
           />
           </div>
+
           <div>
           <label className="discriptionForm" htmlFor="description"> Description: </label>
           <input
@@ -238,15 +237,14 @@ class EditPlace extends Component {
             onChange={this.handleChange}
           />
           </div>
-          <div>
-          <input type="file" name="photo" onChange={this.handleFileUpload}></input>
+          <input className="fileInput" type="file" name="photo" onChange={this.handleFileUpload}></input>
           {this.state.uploadOn2 ? (
             <p></p>
           ) : <p> Image uploaded! </p>}
 
-          <br></br>
+      
           <MapBox className="mapBoxHome" handleMapChange={this.handleMapChange} user={this.props.user} />
-          <br></br>
+       
 
           {/* {this.state.handleSubmit ? (
             <p></p> 
@@ -262,9 +260,8 @@ class EditPlace extends Component {
             )}
             </div>
         </form>
+        
         </div>
-        </div>
-        </>
      
     );
   }

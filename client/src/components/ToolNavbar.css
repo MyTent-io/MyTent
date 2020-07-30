@@ -6,7 +6,9 @@
 
 .Logo {
   width: auto;
-  height: 10vh;
+  height: 8vh;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .welcomUserTag {
   display: center;
