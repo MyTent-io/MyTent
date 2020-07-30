@@ -30,7 +30,6 @@ class Profile extends Component {
 
   return (
       <div>  
-          <h1> My Profile</h1>
           <EditPlace user={this.props.user} setUser={this.props.setUser} getData={this.getData}/> 
       </div>
   )

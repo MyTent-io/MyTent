@@ -9,8 +9,93 @@
 
 .profileimg{ 
  width: auto;
- height: 100%; 
- border-radius: 50%;
+ height: 250px; 
+ border-radius: 10%;
 }
+
+.img-conpatiner{
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 15px 0;
+ }
+
+
+.allContainer{ 
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+
+.divForm {
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
+}
+
+
+.formfield{ 
+  background: linear-gradient(
+    90deg,
+    rgba(251, 63, 77, 1) 0%,
+    rgba(252, 185, 70, 1) 32%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 180px;
+  width: 700px; 
+  border-radius: 10px;
+  margin: 10px 0 10px 0; 
+  opacity: 0.8;
+}
+
+.formfieldMap{ 
+  background: linear-gradient(
+    90deg,
+    rgba(251, 63, 77, 1) 0%,
+    rgba(252, 185, 70, 1) 32%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0.8;
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  margin-bottom: 20px;
+}
+.fileInput{ 
+  width: 105px; 
+  border-radius: 10px;
+}
+
+.titleInput{ 
+  margin: 10px;
+  width: 350px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.descriptionInput{ 
+  margin: 10px;
+  width: 600px;
+  height: 100px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
 
 

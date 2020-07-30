@@ -173,84 +173,93 @@ class EditPlace extends Component {
     console.log(this.props, "PROPS");
 
     return (
-        
-      <>
       <div className="allContainer">
+        <h2> My Profile</h2>
        <div className="img-conpatiner">
-        <Link to={`/favorites`}><p>My Favorites </p></Link>
         <img className="profileimg" src={this.state.userPhoto} />
         </div>  
 
       
-        <form
+        <form 
+          className="formfield"
           encType="multipart/form-data"
           onSubmit={this.handleSubmitUserProfile}
         >
 
-        <div className="addpic">
+       
           <h2>Add a your profile picture!</h2>
+      
           <input
             type="file"
             name="photo"
+            className="fileInput"
             onChange={this.handleFileUploadProfile}
           ></input>
-          </div>
+      
      
          
          <div>
           {this.state.uploadOn ? (
-            <button disabled type="submit">
+            <button className="buttonAddpic" disabled type="submit">
               {" "}
-              Add a your profile picture{" "}
+              Add your picture{" "}
             </button>
           ) : (
               <button type="submit"> Add a your profile picture </button>
             )}
         </div>
         </form>
-      
-      
-        <div className="addCampingPlace">
+       
+        <form 
+        encType="multipart/form-data" 
+        onSubmit={this.handleSubmit}
+        >
+         <div className="formfieldMap" >
+        
+        <div className="divForm">
         <h2> Add a new place for Camping!</h2>
-        <form encType="multipart/form-data" onSubmit={this.handleSubmit}>
-
           {this.handleSubmit.state ? (
             <p> New place added. </p>
           ) : <p> </p>}
 
-          <div>
-          <label className="titleForm" htmlFor="title"> Title: </label>
+       <div>
+          <label className="titleForm" htmlFor="title"> </label>
           <input
+          className="titleInput"
             type="text"
             name="title"
             id="title"
+            placeholder="Title"
             value={this.state.title}
             onChange={this.handleChange}
           />
           </div>
+
           <div>
-          <label className="discriptionForm" htmlFor="description"> Description: </label>
+          <label className="discriptionForm" htmlFor="description"> </label>
           <input
+          className="descriptionInput"
             type="text"
             name="description"
             id="description"
+            placeholder="Description"
             value={this.state.description}
             onChange={this.handleChange}
           />
           </div>
-          <div>
-          <input type="file" name="photo" onChange={this.handleFileUpload}></input>
+          <input className="fileInput" type="file" name="photo" onChange={this.handleFileUpload}></input>
           {this.state.uploadOn2 ? (
             <p></p>
           ) : <p> Image uploaded! </p>}
-
-          <br></br>
-          <MapBox className="mapBoxHome" handleMapChange={this.handleMapChange} user={this.props.user} />
-          <br></br>
-
+       
+          
+         
+          
           {/* {this.state.handleSubmit ? (
             <p></p> 
           ) : <p> New place added! </p>} */}
+
+         
 
           {this.state.uploadOn2 ? (
             <button disabled type="submit">
@@ -261,10 +270,11 @@ class EditPlace extends Component {
               <button type="submit"> Add a Place </button>
             )}
             </div>
+            </div>
         </form>
+        <MapBox className="mapBoxHome" handleMapChange={this.handleMapChange} user={this.props.user} />
+ 
         </div>
-        </div>
-        </>
      
     );
   }
