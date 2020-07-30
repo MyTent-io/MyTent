@@ -1,0 +1,29 @@
+.Navbar {
+  background: rgb(251,63,77);
+  background: linear-gradient(90deg, rgba(251,63,77,1) 0%, rgba(252,185,70,1) 32%);
+  opacity: 80%;
+}
+
+.Logo {
+  width: auto;
+  height: 10vh;
+}
+.welcomUserTag {
+  display: center;
+
+}
+
+.navbarItems {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+h5 {
+  padding-top: 8px;
+  color: red;
+  opacity: 90%;
+}
