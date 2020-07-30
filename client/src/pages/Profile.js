@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import axios from "axios";
 import EditPlace from '../components/EditPlace';
+import { login } from "./auth/auth";
 
 
 
@@ -25,10 +26,12 @@ class Profile extends Component {
   }
 
   render() {
+
+
   return (
-      <div>
+      <div>  
           <h1> My Profile</h1>
-          <EditPlace user={this.props.user} setUser={this.props.setUser} getData={this.getData}/>
+          <EditPlace user={this.props.user} setUser={this.props.setUser} getData={this.getData}/> 
       </div>
   )
   }
