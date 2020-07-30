@@ -126,6 +126,7 @@ class App extends React.Component {
           path="/"
           render={(props) => (
             <div className="homePage">
+              <div className="infoText"><h1>Hey, welcome to MyTent!</h1><p>Here You can find places all over the world to pitch your tent and enjoy the wilderness</p></div>
               <Slider className="slider" />
               <br></br>
               <MapHomepage
