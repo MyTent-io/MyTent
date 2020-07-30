@@ -3,6 +3,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { signup } from '../pages/auth/auth';
 import './Login.css'
 
+
 export default class Signup extends Component {
   state = {
     username: '',
