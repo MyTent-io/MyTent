@@ -5,7 +5,7 @@ const User = require("../models/User");
 const {uploadCloud} = require("../configs/cloudinary");
 
 router.get('/', (req, res) => {
-  Place.find().then(places => {
+  Place.find().populate("userId").then(places => {
     res.json(places)
   }).catch(err => console.log(err))
 });

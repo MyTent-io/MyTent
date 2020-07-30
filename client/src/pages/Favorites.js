@@ -25,7 +25,6 @@ class Favorites extends Component {
     console.log(this.state.favorites, "favorites")
   return (
       <div>
-          <h1> My Favorites </h1>
           <FavoritesList places={this.state.favorites} getData={this.getData}/>
       </div>
   )

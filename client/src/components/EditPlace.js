@@ -174,7 +174,7 @@ class EditPlace extends Component {
 
     return (
       <div className="allContainer">
-        <h2> My Profile</h2>
+        <h2 className="header"> My Profile</h2>
        <div className="img-conpatiner">
         <img className="profileimg" src={this.state.userPhoto} />
         </div>  <form 
