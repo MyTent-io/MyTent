@@ -73,7 +73,7 @@ class PlacesList extends Component {
           <Card.Text><p> {place.description} </p></Card.Text>
           <Button className="cardButton" onClick= {() => this.handleLike(place._id)} type="like" variant="primary">Like</Button>
           <Button className="cardButton" type="delete" onClick= {() => this.handleDelete(place._id)} variant="primary"> Delete Place </Button>
-          <Button className="cardButton" variant="primary"> <Link to={"editPlace/"+place._id}>Edit Place</Link>  </Button>
+          <Button className="cardButton" variant="primary"> <Link style={{color:"white"}} to={"editPlace/"+place._id}>Edit Place</Link>  </Button>
           </Card.Body>
           </Card>
           </div>

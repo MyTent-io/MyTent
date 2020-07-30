@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Link} from "react-router-dom";
 import axios from "axios";
 import { Button, Card, Container, Col, Row, Form } from 'react-bootstrap';
+import './EditCreatedPlace.css'; 
 
 class EditCreatedPlace extends Component {
   state = {
@@ -63,21 +64,30 @@ class EditCreatedPlace extends Component {
 
   render() {
   return (
-    <div className="cardDatailsContainer">
+
+    <div className="editContainer">
+    
         <Form onSubmit={this.handleEdit}> 
+        <div>
           <Form.Control 
           label= "name" name="name" id="name" type="text" value={this.state.name} onChange={this.handleChange} 
           />
           <Form.Control 
+          className="descriptionInput"
           label= "description" name="description" id="description" type="text" value={this.state.description} onChange={this.handleChange} 
           />
           {/* <Form.Control 
           label= "imgPath" name="imgPath" id="imgPath" type="image" src={this.state.imgPath} onChange={this.handleChange} 
           /> */}
+        <div className="buttons">
+           <Link to={`/allPlaces`}><p>Back</p></Link>  
            <Button className="cardButton" variant="primary" type="submit"> {/*<Link to={"/allPlaces"}>Save</Link> */} save </Button>
+           </div>
+           </div>
         </Form>
-        <Link to={`/allPlaces`}><p>Back</p></Link>
-       
+      
+        
+  
     </div>
   )
 }
