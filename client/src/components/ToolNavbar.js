@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 import {logout} from '../pages/auth/auth'
 import './ToolNavbar.css'
 import logo from "../images/LOGOMYTENT.png"
@@ -18,19 +18,19 @@ function ToolNavbar (props) {
     <Navbar.Brand href="/" ><img src={logo} className="Logo" /></Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav"  />
     <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="mr-auto">
-        {/* <Nav.Link href="#features">Features</Nav.Link>
-        <Nav.Link href="#pricing">Pricing</Nav.Link> */}
-      </Nav>
+    
       <Nav className="navbarItems" >
       {props.user ? (
         <>
-        <h5 className= "welcomUserTag" style={{ color: '0000' }}>Welcome {props.user.username} </h5>
-        <Nav.Link href="/myprofile">Profil</Nav.Link>
+        <div className= "welcomUserTag">
+        <h5 style={{fontWeight:900}}>Welcome {props.user.username} </h5>
+        </div>
+        <div className="navbarTags">
+        <Nav.Link href="/myprofile">Profile</Nav.Link>
         <Nav.Link href="/favorites">Favorites</Nav.Link>
         <Nav.Link href="/allPlaces">See all places</Nav.Link>
         <Nav.Link to='/' onClick={() => handleLogout(props)}>Logout</Nav.Link>
-      
+        </div>
 
         </>
         ) : (
