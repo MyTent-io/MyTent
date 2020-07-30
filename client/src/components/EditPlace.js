@@ -174,13 +174,10 @@ class EditPlace extends Component {
 
     return (
       <div className="allContainer">
-        <h2> My Profile</h2>
+        <h2 className="header"> My Profile</h2>
        <div className="img-conpatiner">
         <img className="profileimg" src={this.state.userPhoto} />
-        </div>  
-
-      
-        <form 
+        </div>  <form 
           className="formfield"
           encType="multipart/form-data"
           onSubmit={this.handleSubmitUserProfile}
@@ -208,7 +205,12 @@ class EditPlace extends Component {
               <button type="submit"> Add a your profile picture </button>
             )}
         </div>
-        </form>
+        </form> 
+        <br></br>
+        <h3>Click on the map to add a new campingsite</h3>
+        <MapBox className="mapBoxHome" handleMapChange={this.handleMapChange} user={this.props.user} />
+ 
+       
        
         <form 
         encType="multipart/form-data" 
@@ -246,6 +248,7 @@ class EditPlace extends Component {
             value={this.state.description}
             onChange={this.handleChange}
           />
+          
           </div>
           <input className="fileInput" type="file" name="photo" onChange={this.handleFileUpload}></input>
           {this.state.uploadOn2 ? (
@@ -272,8 +275,7 @@ class EditPlace extends Component {
             </div>
             </div>
         </form>
-        <MapBox className="mapBoxHome" handleMapChange={this.handleMapChange} user={this.props.user} />
- 
+        
         </div>
      
     );

@@ -1,5 +1,5 @@
 .logContainer{ 
-  margin-top: 100px; 
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +20,13 @@
 }
 
 
-.logButton:hover {background-color: blue}
+.logButton:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(251, 63, 77, 1) 0%,
+    rgba(252, 185, 70, 1) 32%
+  );
+}
 
 .logButton:active {
   box-shadow: 0 1px #666;
