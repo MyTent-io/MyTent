@@ -20,6 +20,7 @@ import Slider from "./components/Slider";
 import Edit from "./pages/Edit";
 import Favorites from "./pages/Favorites";
 import AllPlaces from './pages/AllPlaces'; 
+import EditCreatedPlace from "./components/EditCreatedPlace";
 
 class App extends React.Component {
   state = {
@@ -87,6 +88,15 @@ class App extends React.Component {
         />
 
         {/* new Route */}
+        <Route
+          exact
+          path="/editPlace/:placeId"
+          render={(props) => (
+            <div>
+              <EditCreatedPlace {...props}/>
+            </div>
+          )}
+        />
 
         <Route
           exact
