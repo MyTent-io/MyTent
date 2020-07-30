@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 // import { Route, Redirect } from 'react-router-dom';
 import Profile from "./pages/Profile";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import EditPlace from "./components/EditPlace";
 import MapHomepage from "./components/MapHomepage";
 import "./components/MapBox.css";
@@ -53,22 +53,26 @@ class App extends React.Component {
         <Route
           exact
           path="/favorites"
-          render={(props) => (
-            <Favorites
-              {...props}
-              setUser={this.setUser}
-              user={this.state.user}
-            />
-          )}
+          render={props => {
+            if (this.state.user) return <Favorites
+            {...props}
+            setUser={this.setUser}
+            user={this.state.user}
+          />
+            else return <Redirect to='/' />
+          }}
         />
+        
 
         <Route
           exact
           path="/myprofile"
-          render={(props) => (
-            <Profile {...props} setUser={this.setUser} user={this.state.user} />
-          )}
-        />
+          render={(props) => { 
+              if (this.state.user) return <Profile {...props} setUser={this.setUser} user={this.state.user} />
+              else return <Redirect to='/' />
+            }}
+          />
+
 
         <Route
           exact
