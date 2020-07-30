@@ -12,6 +12,15 @@
 	align-content: space-around;
 }
 
+.cardContainers{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	align-content: space-around;
+}
+
 .cardButton{
   margin: 0 2px 0 2px;
 }

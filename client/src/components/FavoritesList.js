@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import { Button, Card, Container, Col, Row } from 'react-bootstrap';
 
 class FavoritesList extends Component {
 
@@ -21,14 +22,17 @@ class FavoritesList extends Component {
     console.log(this.props.places)
     if(!this.props.places) return <div> empty </div>
     return (
-      <div>
-        <Link to={`/`}><p>Home</p></Link>
+      <div className="cardContainers">
         {this.props.places.map(place => {
           return (
-            <div key={place._id}>
+            <div >
+            <Card key={place._id} className="card">
+            <Card.Img variant="top" src={place.imgPath} />
+            <Card.Body>
             <Link to={`/place/${place._id}`}><p>{place.name}</p></Link>
-            <p>{place.description}</p>
-            <img className="myPlaces" src={place.imgPath} />
+            <Card.Text> <p>{place.description}</p> </Card.Text> 
+            </Card.Body>
+            </Card>
             </div>
           )
         })}
