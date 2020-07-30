@@ -173,23 +173,31 @@ class EditPlace extends Component {
     console.log(this.props, "PROPS");
 
     return (
-      <div className="Form">
-        <div className="img-conpatiner">
-          <Link to={`/favorites`}><p>My Favorites </p></Link>
-          <img className="profileimg" src={this.state.userPhoto} />
-        </div>
+        
+      <>
+      <div className="allContainer">
+       <div className="img-conpatiner">
+        <Link to={`/favorites`}><p>My Favorites </p></Link>
+        <img className="profileimg" src={this.state.userPhoto} />
+        </div>  
+
+      
         <form
           encType="multipart/form-data"
           onSubmit={this.handleSubmitUserProfile}
         >
+
+        <div className="addpic">
           <h2>Add a your profile picture!</h2>
           <input
             type="file"
             name="photo"
             onChange={this.handleFileUploadProfile}
           ></input>
-          <br></br>
-          <br></br>
+          </div>
+     
+         
+         <div>
           {this.state.uploadOn ? (
             <button disabled type="submit">
               {" "}
@@ -198,7 +206,11 @@ class EditPlace extends Component {
           ) : (
               <button type="submit"> Add a your profile picture </button>
             )}
+        </div>
         </form>
+      
+      
+        <div className="addCampingPlace">
         <h2> Add a new place for Camping!</h2>
         <form encType="multipart/form-data" onSubmit={this.handleSubmit}>
 
@@ -206,7 +218,8 @@ class EditPlace extends Component {
             <p> New place added. </p>
           ) : <p> Bratan Test! </p>}
 
-          <label htmlFor="title"> Title: </label>
+          <div>
+          <label className="titleForm" htmlFor="title"> Title: </label>
           <input
             type="text"
             name="title"
@@ -214,9 +227,9 @@ class EditPlace extends Component {
             value={this.state.title}
             onChange={this.handleChange}
           />
-
-
-          <label htmlFor="description"> Description: </label>
+          </div>
+          <div>
+          <label className="discriptionForm" htmlFor="description"> Description: </label>
           <input
             type="text"
             name="description"
@@ -224,7 +237,8 @@ class EditPlace extends Component {
             value={this.state.description}
             onChange={this.handleChange}
           />
-
+          </div>
+          <div>
           <input type="file" name="photo" onChange={this.handleFileUpload}></input>
           {this.state.uploadOn2 ? (
             <p></p>
@@ -246,8 +260,12 @@ class EditPlace extends Component {
           ) : (
               <button type="submit"> Add a Place </button>
             )}
+            </div>
         </form>
-      </div>
+        </div>
+        </div>
+        </>
+     
     );
   }
 }
