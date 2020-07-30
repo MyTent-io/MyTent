@@ -216,7 +216,7 @@ class EditPlace extends Component {
 
           {this.handleSubmit.state ? (
             <p> New place added. </p>
-          ) : <p> Bratan Test! </p>}
+          ) : <p> </p>}
 
           <div>
           <label className="titleForm" htmlFor="title"> Title: </label>

@@ -1,29 +1,65 @@
 .Navbar {
-  background: rgb(251,63,77);
-  background: linear-gradient(90deg, rgba(251,63,77,1) 0%, rgba(252,185,70,1) 32%);
-  opacity: 80%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(251, 63, 77, 1) 0%,
+    rgba(252, 185, 70, 1) 32%
+  );
+  opacity: 0.8;
+  display: flexbox;
+  justify-content: flex-end;
+  font-weight: 900;
 }
 
 .Logo {
   width: auto;
-  height: 10vh;
+  height: 9vh;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-.welcomUserTag {
-  display: center;
 
+.test {
+  float: right;
+}
+
+.welcomUserTag {
+  display: left;
 }
 
 .navbarItems {
   display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  float: right;
 }
-
+.navbarTags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+  float: right;
+}
 h5 {
   padding-top: 8px;
-  color: red;
-  opacity: 90%;
+  color: #6AC98F;
+  opacity: 0.9;
+  font-style: normal;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
