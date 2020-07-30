@@ -22,6 +22,23 @@
 	align-items: center;
 	align-content: center;
 }
+.infoText{
+  height: 25vh;
+  width: 50vw;
+  margin: 50px;
+  /*background: grey;*/
+  border-style: none;
+  font-family: 'Amatic SC', cursive;
+  
+  
+}
+.infoText > h1 {
+  font-size: 3em;
+}
+.infoText > p {
+  font-size: 3em;
+}
+
 .inputProfil{
   border-radius: 30px;
   background-color: white;
@@ -38,9 +55,16 @@
   
    margin: 90px;
    width: 80vw;
+   
 
  }
+.d-block {
+  border-style: none;
+  border-radius:10%;
+  padding: 0;
+   
 
+}
 
  /* Navbar */
 
@@ -57,20 +81,28 @@
 }
  .homeApp {
    /*background-color: brown;*/
-   background-image: url("./images/IMG_9232.JPG");
+   background-image: url("./images/blackandwhite.JPG"); 
    background-size: cover;
-   width: 100vw;
-   height: auto;
+   height: 100%;
+   width:100%;
+   overflow: hidden;
+   background-attachment: fixed;
    
  }
 .mapBoxHome {
   margin: 200px;
   padding: 50px;
+  border-style: none;
+  border-radius:10%;
 
 }
 
 .mapContainer {
   margin: 90px;
-   width: 80vw;
+  width: 60vw;
+  border-style: none;
+  border-radius:4%;
+
 
 }
+
