@@ -17,7 +17,6 @@ import PlaceDetails from "./components/PlaceDetails";
 //import TaskDetails from './components/TaskDetails';
 // import { Route, Redirect } from 'react-router-dom';
 import Slider from "./components/Slider";
-import Edit from "./pages/Edit";
 import Favorites from "./pages/Favorites";
 import AllPlaces from './pages/AllPlaces'; 
 import EditCreatedPlace from "./components/EditCreatedPlace";
@@ -98,15 +97,7 @@ class App extends React.Component {
           )}
         />
 
-        <Route
-          exact
-          path="/edit"
-          render={(props) => (
-            <div>
-              <Edit />
-            </div>
-          )}
-        />
+       
 
         {/* end new rout  */}
 
