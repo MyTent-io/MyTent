@@ -112,3 +112,17 @@
   justify-content: center;
   margin: 20px;
 }
+
+.img-wrapper {
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.img-wrapper img {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
