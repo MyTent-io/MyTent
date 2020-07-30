@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { signup } from '../pages/auth/auth';
 
+
 export default class Signup extends Component {
   state = {
     username: '',
