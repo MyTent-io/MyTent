@@ -3,9 +3,30 @@ const router = express.Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
+const {uploadCloud2} = require("../configs/cloudinary");
+
+
+router.post("/uploadImage",uploadCloud2.single("imagePath"),(req,res)=>{
+  console.log(req.file)
+  res.json(req.file.url)
+})
+
+router.post('/profilePicture',uploadCloud2.single("photo"), (req, res) => { 
+
+  console.log("llamando?", req.user)
+  const imgPath=req.body.photo;
+  const userId = req.user._id;
+  console.log(req.body, imgPath, " imgPath")
+  User.findByIdAndUpdate(userId, {photo: imgPath}, { new: true}).then(userUpdated => {
+    console.log(userUpdated, "userUpdated")
+    res.json(userUpdated)
+  }).catch(err => console.log(err))
+}); 
+
 
 router.post("/signup", (req, res) => {
   const { username, password } = req.body;
+  console.log(username, password)
 
   if (!password || password.length < 8) {
     return res

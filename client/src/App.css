@@ -12,23 +12,63 @@
     transform: rotate(360deg);
   }
 }
-
-.searchBar { 
-  /* width: 50%; */
-  position: relative;
-  left:39%;
-  top: 20vh;
+.homePage {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
-
 .inputProfil{
   border-radius: 30px;
   background-color: white;
-  width: 427px;
-  height: 39px;
-  border: 1px solid #ccc;
-  
+  width: 600px;
+  height: 60px;
+  border: 1px solid grey;
 }
 
-
 .inputProfil:hover{ box-shadow: 1px 1px 1px 1px; }
+
+ /* Slider */
+
+ .slide{ 
   
+   margin: 90px;
+   width: 80vw;
+
+ }
+
+
+ /* Navbar */
+
+.navbar{ 
+  overflow: hidden;
+  height: 70px;
+}
+
+.profileimg{
+  width: 300px;
+ }
+ .myPlaces{
+  width: 300px;
+}
+ .homeApp {
+   /*background-color: brown;*/
+   background-image: url("./images/IMG_9232.JPG");
+   background-size: cover;
+   width: 100vw;
+   height: auto;
+   
+ }
+.mapBoxHome {
+  margin: 200px;
+  padding: 50px;
+
+}
+
+.mapContainer {
+  margin: 90px;
+   width: 80vw;
+
+}
