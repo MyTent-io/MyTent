@@ -87,7 +87,7 @@ export default class MapHomepage extends Component {
           .setLngLat([place.longitude, place.latitude])
           .setPopup(
             new mapboxgl.Popup().setHTML(
-              `<p><b>${place.name}</b></p><img src="${place.imgPath}"  width="60" height="60"/> <p>${place.description}</p><p>created by ${this.props.user.username}</p><a href="/place/${place._id}">See Details</a>`
+              `<p><b>${place.name}</b></p><img src="${place.imgPath}"  width="60" height="60"/> <p>${place.description}</p><p>created by ${place.userId.username}</p><a href="/place/${place._id}">See Details</a>`
             )
           )
           .addTo(map);
@@ -98,6 +98,7 @@ export default class MapHomepage extends Component {
 
   render() {
     const { lng, lat, zoom } = this.state;
+    console.log(this.state.places)
     return (
       <>
         <div ref={(el) => (this.mapContainer = el)} className="mapContainer" />

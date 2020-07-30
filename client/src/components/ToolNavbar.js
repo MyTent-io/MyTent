@@ -28,7 +28,7 @@ function ToolNavbar (props) {
         <div className="navbarTags">
         <Nav.Link href="/myprofile">Profile</Nav.Link>
         <Nav.Link href="/favorites">Favorites</Nav.Link>
-        <Nav.Link href="/allPlaces">See all places</Nav.Link>
+        <Nav.Link href="/allPlaces">Created places</Nav.Link>
         <Nav.Link to='/' onClick={() => handleLogout(props)}>Logout</Nav.Link>
         </div>
 

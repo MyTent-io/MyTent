@@ -41,6 +41,10 @@ export default class PlaceDetails extends Component {
 
   render() {
     if (!this.state.place) return <div>loading...</div>
+
+     
+
+
     return (
       <div className="cardDatailsContainer">    
       <Card style={{width: "25rem"}} className="detailsCard">

@@ -5,7 +5,7 @@ const User = require("../models/User");
 const {uploadCloud} = require("../configs/cloudinary");
 
 router.get('/', (req, res) => {
-  Place.find().then(places => {
+  Place.find().populate("userId").then(places => {
     res.json(places)
   }).catch(err => console.log(err))
 });
@@ -90,6 +90,41 @@ router.put("/like/:placeId", async (req, res) => {
       })
       .catch((err) => res.status(400).json(err));
   }
+});
+
+router.put('/allplaces', (req, res) => {
+  const { title, description } = req.body;
+
+  Project.findByIdAndUpdate(
+    req.params.id,
+    { title, description },
+    // { new: true } ensures that we are getting the updated document in the .then callback
+    { new: true }
+  )
+    .then(project => {
+      res.status(200).json(project);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+});
+
+router.put('/edit/:id', (req, res) => {
+  const { name, description, imgPath } = req.body;
+
+  Place.findByIdAndUpdate(
+    req.params.id,
+    { name, description, },
+    // { new: true } ensures that we are getting the updated document in the .then callback
+    { new: true }
+  )
+    .then(place => {
+      console.log(place)
+      res.status(200).json(place);
+    })
+    .catch(err => {
+      res.json(err);
+    });
 });
 
 router.get("/favorites", (req, res) => {
