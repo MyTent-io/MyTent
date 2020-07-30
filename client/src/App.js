@@ -98,12 +98,17 @@ class App extends React.Component {
         <Route
           exact
           path="/signup"
-          render={(props) => <Signup setUser={this.setUser} {...props} />}
-        />
+          render={(props) => { 
+            if (this.state.user) return <Redirect to='/' />
+            else return <Signup setUser={this.setUser} {...props}/>}
+          }/>
+
         <Route
           exact
           path="/login"
-          render={(props) => <Login setUser={this.setUser} {...props} />}
+          render={(props) => {
+            if (this.state.user) return <Redirect to='/' />
+            else return <Signup setUser={this.setUser} {...props}/>}}
         />
 
         <Route
