@@ -47,8 +47,9 @@ export default class Login extends Component {
         <h2>Login</h2>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group>
-            <Form.Label htmlFor='username'>Username: </Form.Label>
+            <Form.Label  htmlFor='username'>Username: </Form.Label>
             <Form.Control
+              style={{height:"60px"}}
               type='text'
               name='username'
               value={this.state.username}
@@ -57,8 +58,9 @@ export default class Login extends Component {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label htmlFor='password'>Password: </Form.Label>
+            <Form.Label style={{width: "400px"}} htmlFor='password'>Password: </Form.Label>
             <Form.Control
+              style={{height:"60px"}}
               type='password'
               name='password'
               value={this.state.password}
@@ -69,7 +71,8 @@ export default class Login extends Component {
           {this.state.message && (
             <Alert variant='danger'>{this.state.message}</Alert>
           )}
-          <Button type='submit'>Login</Button>
+          <button className="logButton" type='submit'>Login</button>
+          {/* <Button type='submit'>Login</Button> */}
         </Form>
         </div>
       </>

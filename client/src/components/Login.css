@@ -1,6 +1,28 @@
 .logContainer{ 
+  margin-top: 100px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.logButton{
+  margin-top: 30px;
+  width: 300px; 
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
+}
+
+
+.logButton:hover {background-color: blue}
+
+.logButton:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
 }
