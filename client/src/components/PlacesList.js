@@ -66,13 +66,13 @@ class PlacesList extends Component {
         return (      
          <div className="cardContainer">
           <Card key={place._id} className="card">
-          <Card.Img variant="top" src={place.imgPath} className="myPlaces"  />
+          <Card.Img variant="top" src={place.imgPath} className="myPlaces"  /> 
           <Card.Body>
-          <Card.Title><Link to={`/place/${place._id}`}><p>{place.name}</p></Link></Card.Title>
-          <Card.Text><p> Place created by {place.userId.username}</p></Card.Text>
+          <Card.Title  className="hre"><Link to={`/place/${place._id}`}>{place.name}</Link></Card.Title>
+          <Card.Text>Place created by {place.userId.username}</Card.Text>
           <Card.Text><p> {place.description} </p></Card.Text>
           <Button className="cardButton" onClick= {() => this.handleLike(place._id)} type="like" variant="primary">Like</Button>
-          <Button className="cardButton" type="delete" onClick= {() => this.handleDelete(place._id)} variant="primary"> Delete Place </Button>
+          <Button className="cardButton" type="delete" onClick= {() => this.handleDelete(place._id)} variant="primary"> Delete </Button>
           <Button className="cardButton" variant="primary"> <Link style={{color:"white"}} to={"editPlace/"+place._id}>Edit Place</Link>  </Button>
           </Card.Body>
           </Card>
