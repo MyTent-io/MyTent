@@ -90,14 +90,8 @@ class App extends React.Component {
         <Route
           exact
           path="/editPlace/:placeId"
-          render={(props) => (
-            <div>
-              <EditCreatedPlace {...props}/>
-            </div>
-          )}
+          render={(props) => <EditCreatedPlace {...props} />}
         />
-
-       
 
         {/* end new rout  */}
 
