@@ -108,7 +108,7 @@ class App extends React.Component {
           path="/login"
           render={(props) => {
             if (this.state.user) return <Redirect to='/' />
-            else return <Signup setUser={this.setUser} {...props}/>}}
+            else return <Login setUser={this.setUser} {...props}/>}}
         />
 
         <Route
