@@ -49,7 +49,6 @@ export default class Login extends Component {
           <Form.Group>
             <Form.Label  htmlFor='username'>Username: </Form.Label>
             <Form.Control
-              style={{height:"60px"}}
               type='text'
               name='username'
               value={this.state.username}
@@ -60,7 +59,6 @@ export default class Login extends Component {
           <Form.Group>
             <Form.Label style={{width: "400px"}} htmlFor='password'>Password: </Form.Label>
             <Form.Control
-              style={{height:"60px"}}
               type='password'
               name='password'
               value={this.state.password}
