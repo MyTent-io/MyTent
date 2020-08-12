@@ -4,11 +4,11 @@
    
    MyTent was realized with:
    
-   *React
-   *MongoDB
-   *Express
-   *Node JS
-   *Mapbox GL JS API
+   - React
+   - MongoDB
+   - Express
+   - Node JS
+   - Mapbox GL JS API
   
 
 deployed version: https://mytent.herokuapp.com/
