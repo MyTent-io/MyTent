@@ -18,7 +18,7 @@ const app = express();
 
 
 mongoose
-  .connect(MONGODB || process.env.MONGODB_URI ||"mongodb://localhost/travelblog", {useNewUrlParser: true, useUnifiedTopology: true})
+  .connect(MONGODB , {useNewUrlParser: true, useUnifiedTopology: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
