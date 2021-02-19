@@ -11,6 +11,6 @@
    - Mapbox GL JS API
   
 
-deployed version: https://mytent.herokuapp.com/
+deployed version: https://floating-fortress-52108.herokuapp.com/
 
 This project was done by: Simon Ertel, Romulo Galiao and Luis Schmitz
